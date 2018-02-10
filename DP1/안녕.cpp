@@ -10,13 +10,13 @@ int main()
 	int N, happy[21], joy[21], BAG[MAX];
 	fill(BAG, BAG + 100, 0);
 
-	cin >> N;//�λ�
+	cin >> N;//ÀÎ»ç
 
 	for (int i = 1; i <= N; i++)
-		cin >> happy[i];//ü��
+		cin >> happy[i];//Ã¼·Â
 
 	for (int i = 1; i <= N; i++)
-		cin >> joy[i];//���	
+		cin >> joy[i];//±â»Ý	
 
 	for (int i = 1; i <= N; i++)
 		for (int j =99; j>=happy[i]; j--)
