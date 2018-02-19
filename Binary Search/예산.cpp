@@ -29,11 +29,11 @@ void buget(int a)
 				hi = mid;
 		}
 		else {
-			printf("%d\n", mid);
-				break;
+			printf("%d\n", mid); ////딱 숫자가 떨어지는 경우에만 수행
+ 				break;
 		}
 		
-		//////////////while문 계속 실행하다가 맨 마지막에 실행/////////////////
+		/* 		while문 계속 실행하다가 맨 마지막에 실행		   */
 		if (lo + 1 == hi)
 		{	
 				printf("%d\n",lo);
