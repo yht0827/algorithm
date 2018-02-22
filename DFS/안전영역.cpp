@@ -5,7 +5,7 @@ int arr[101][101] = { 0, };
 int safe[101][101] = { 0, };
 
 
-void area(int n,int m,int k)
+void area(int n,int m,int k)		/////////////////flood fill 알고리즘사용//////////////////////
 {
 	if (arr[n][m] <= k || safe[n][m]==1)
 	{	return; }
@@ -32,7 +32,7 @@ void DFS(int N,int max)
 			for (int k = 1; k <= N; k++)
 			{
 
-				if (arr[j][k] >i && (safe[j][k] == 0))
+				if (arr[j][k] >i && (safe[j][k] == 0)) ///////////// DFS알고리즘으로 탐색/////////////
 				{
 					area(j,k,i);
 					cnt++;
