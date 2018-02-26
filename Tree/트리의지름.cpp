@@ -10,7 +10,7 @@ int visited[10001];//방문 확인
 int sum[10001];//가중치 누적 합
 int a, b;// 2개의 노드 입력
 int temp;//가중치 입력
-vector<vector<pair<int,int>>> arr; // arr[1][4,100] => 1번과 4번 노드 사이의 가중치 100 표현
+vector<vector<pair<int,int>>> arr; // arr[1][{4,100}] => 1번과 4번 노드 사이의 가중치 100 표현
 queue<int> q;// 큐
 
 int BFS(int a)
