@@ -1,4 +1,5 @@
-#include<cstdio>
+/////////////////////////BFS로 해결/////////////////////
+include<cstdio>
 #include<iostream>
 #include<vector>
 #include<queue>
@@ -26,7 +27,8 @@ int BFS(int a)
 		for (int i = 0; i < qSize; i++) {
 			int curr = q.front();
 			q.pop();
-			for (auto next : arr[curr]) {
+			for (auto next : arr[curr]) {		//auto사용하면 타입을 알아서 설정해줌 
+								//next -> next.first , next.second
 				if (!visited[next.first]) {
 					visited[next.first] = 1;
 					q.push(next.first);
@@ -79,3 +81,46 @@ int main()
 	
 	return 0;
 }
+
+///////////////////////DFS로 해결////////////////
+/*
+#include <cstdio>
+#include <algorithm>
+#include <vector>
+#include <cstring>
+#define INF 987654321
+using namespace std;
+int n, x, y, z, u, v, r;
+vector<int> dist;
+vector<vector<pair<int, int>>> vt;
+void dfs(int here, int dis) {
+    dist[here] = dis;
+    if (dist[here] > r) {
+        r = dist[here];
+        u = here;
+    }
+    for (auto next : vt[here]) {
+        if (dist[next.first] != INF)continue;
+        dfs(next.first, dis + next.second);
+    }
+}
+int main() {
+    scanf("%d", &n);
+    vt.resize(n + 1);
+    for (int i = 0; i < n - 1; i++) {
+        scanf("%d%d%d", &x, &y, &z);
+        vt[x].push_back({ y,z });
+        vt[y].push_back({ x,z });
+    }
+    dist.assign(n + 1, INF);
+    dfs(1, 0);
+    v = u, r = 0;
+    dist.assign(n + 1, INF);
+    dfs(u, 0);    //u와 v에 트리의 지름의 단말노드가 담기게 됨
+    printf("%d\n", r);
+    return 0;
+}
+*/
+
+
+
