@@ -18,11 +18,14 @@ public class 줄어들지않아 {
 		for(int i=0;i<=9;i++)
 		{
 			dp[1][i]=1;
+			if(i>=1)
+			{
+				dp[i][0]=1;
+			}
+			
 		}
 		for(int i=2;i<=64;i++)
 		{
-			dp[i][0]=1;
-			
 			for(int j=0;j<=9;j++)
 			{
 				sum1=0;
