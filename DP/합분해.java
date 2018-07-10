@@ -17,8 +17,8 @@ public class 합분해 {
 		}
 		for(int i=2;i<=K;i++){
 			for(int j=0;j<=N;j++){
-				for(int n=0;n<=j;n++){
-					dp[i][j]=(dp[i][j]+dp[i-1][j-n])%1000000000;
+				for(int n=j;n>=0;n--){
+					dp[i][j]=(dp[i][j]+dp[i-1][n])%1000000000;
 				}
 			}
 		}
