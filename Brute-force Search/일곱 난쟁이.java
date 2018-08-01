@@ -6,7 +6,7 @@ public class Main {
 
 	private static int [] arr = new int[9];
 	private static int sum;
-	private static ArrayList<Integer> list = new ArrayList();
+	private static ArrayList<Integer> list = new ArrayList<Integer>();
 
 	public static void main(String[] args) {
 
