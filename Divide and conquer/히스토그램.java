@@ -1,3 +1,6 @@
+/*
+		스택을이용한풀이
+*/
 import java.util.Scanner;
 import java.util.Stack;
 
